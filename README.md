@@ -11,3 +11,7 @@ I have this deployed on Heroku here: http://readability-importer.heroku.com
 # Development
 
 This was an evening with Sinatra and OAuth. It could use a lot of cleaning up and beautification. If you want to help, you know the drill. Fork, change, pull request, enjoy.
+
+# License
+
+BSD
