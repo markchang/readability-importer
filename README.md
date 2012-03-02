@@ -1,6 +1,6 @@
 # Readability Importer
 
-Well, it really is just a ReadItLater to Readability importer.
+Well, it really is just a ReadItLater to Readability importer. It only imports your unread articles!
 
 This runs on Sinatra and requires a bunch of gems, as you can see in the source. Use it at your own risk, after putting your relevant keys into the environment. 
 
