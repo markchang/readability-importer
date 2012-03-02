@@ -12,7 +12,7 @@ set :haml, :format => :html5
 RIL_KEY = ENV['RIL_KEY']
 RD_KEY = ENV['RD_KEY']
 RD_SECRET = ENV['RD_SECRET']
-HOST_CALLBACK = "http://localhost:3000/auth/callback"
+HOST_CALLBACK = "http://readability-importer.heroku.com/auth/callback"
 # CONFIG END
 
 get '/' do
