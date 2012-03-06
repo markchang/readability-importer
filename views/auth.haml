@@ -11,14 +11,22 @@
 
 		%title ReadItLater <-> Readability
 	%body
-		%h2 Shall we do this?
-		%p
-			When you click on the link below, I'm going to send
-			= article_count
-			URLs to Readability.
+		%h2 What now?
 		%p
 			Please note, it takes a bit of time for each URL, so be patient and let the page finish loading.
 		%p
 			%a{:href => '/'} GET ME OUTTA HERE!
+			%br/
+			%b I don't want to do anything. Leave me alone!
+
 		%p
-			%a{:href => '/go'} DO IT
+			%a{:href => '/go'} IMPORT THOSE ARTICLES!
+			%br/
+			%b= "I want to import my #{ril_article_count} articles into Readability"
+
+		%p
+			%a{:href => '/delete'} DELETE ALL MY ARTICLES!
+			%br/
+			%b= "I want to delete my #{readability_article_count} bookmarks from Readability"
+			%br/
+			%b You probably don't want to do this!
