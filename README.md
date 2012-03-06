@@ -10,9 +10,10 @@ I have this deployed on Heroku here: http://readability-importer.heroku.com
 
 # Known (or suspected) issues
 
-  * The articles are going to be imported backwards. Sorry. I'll fix that eventually. *This seems to be not my problem, but something weird with the Readability API. Investigating.*
-  * I am not spawning a background task to do the import. Thus, if it is long running (say, >100 articles and 30s), Heroku will kill the instance of the application, leaving you partially imported. Fix is to start a background job. Not going to do, since I'd have to manage queues and such under the free limitation.
-    * I should make this obvious on how to use locally so people can import from their own machines without the Heroku limitation.
+  * The articles are not imported in order. This is because the article text is fetched by Readability asynchronously after we push the bookmark to them. Each article takes a different amount of time, and the order of articles is rendered reverse chronologically depending on when the article was fetched. **Not fixable.**
+  * I am not spawning a background task to do the import. Thus, if it is long running, Heroku will kill the instance of the application, leaving you partially imported. Fix is to start a background job. Not going to do, since I'd have to pay for Delayed Jobs on Heroku. **Not fixed.**
+  
+  * I should make this obvious on how to use this locally so people can import from their own machines without the Heroku limitation.
 
 # Development
 
